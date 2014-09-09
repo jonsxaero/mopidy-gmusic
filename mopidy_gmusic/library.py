@@ -439,7 +439,7 @@ class GMusicLibraryProvider(backend.LibraryProvider):
             album = self._aa_to_mopidy_album(song)
             return album
         except KeyError:
-            name = song['album']
+            name = song.get('album','Unknown Album')
             artist = self._to_mopidy_album_artist(song)
             date = unicode(song.get('year', 0))
             uri = 'gmusic:album:' + self._create_id(artist.name + name + date)
@@ -457,7 +457,7 @@ class GMusicLibraryProvider(backend.LibraryProvider):
             return album
 
     def _to_mopidy_artist(self, song):
-        name = song['artist']
+        name = song.get('artist','Unknown Artist')
         uri = 'gmusic:artist:' + self._create_id(name)
 
         # First try to process the artist as an aa artist
@@ -476,7 +476,7 @@ class GMusicLibraryProvider(backend.LibraryProvider):
     def _to_mopidy_album_artist(self, song):
         name = song.get('albumArtist', '')
         if name.strip() == '':
-            name = song['artist']
+            name = song.get('artist','Unknown Artist')
         uri = 'gmusic:artist:' + self._create_id(name)
         artist = Artist(
             uri=uri,
