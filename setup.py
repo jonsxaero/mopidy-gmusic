@@ -26,7 +26,11 @@ setup(
         'setuptools',
         'Mopidy >= 1.0',
         'Pykka >= 1.1',
-        'gmusicapi >= 4.0.0',
+        'gmusicapi == 5.1.0-dev',
+    ],
+    dependency_links=[
+        ("git+ssh://git@github.com/simon-weber/Unofficial-Google-Music-API.git"
+        "@develop#egg=gmusicapi-5.1.0-dev")
     ],
     test_suite='nose.collector',
     tests_require=[
