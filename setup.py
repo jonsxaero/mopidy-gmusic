@@ -34,7 +34,6 @@ setup(
     ],
     test_suite='nose.collector',
     tests_require=[
-    gmusicapi==dev
         'nose',
         'mock >= 1.0',
     ],
