@@ -31,7 +31,7 @@ setup(
     ],
     dependency_links=[
         ("http://github.com/simon-weber/Unofficial-Google-Music-API/"
-        "tarball/develop#egg=gmusicapi-5.1.0-dev")
+         "tarball/develop#egg=gmusicapi-5.1.0-dev")
     ],
     test_suite='nose.collector',
     tests_require=[
