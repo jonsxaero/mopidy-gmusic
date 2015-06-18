@@ -26,7 +26,12 @@ setup(
         'setuptools',
         'Mopidy >= 1.0',
         'Pykka >= 1.1',
-        'gmusicapi >= 4.0.0',
+        'gmusicapi == 5.1.0-dev',
+        'pycrypto >= 2.6.1',
+    ],
+    dependency_links=[
+        ("http://github.com/simon-weber/Unofficial-Google-Music-API/"
+         "tarball/develop#egg=gmusicapi-5.1.0-dev")
     ],
     test_suite='nose.collector',
     tests_require=[
