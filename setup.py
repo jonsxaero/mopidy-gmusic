@@ -26,6 +26,7 @@ setup(
         'setuptools',
         'Mopidy >= 1.0',
         'Pykka >= 1.1',
+        'pycrypto >= 2.6.1',
         'gmusicapi == 7.0.0-dev',
     ],
     dependency_links=[
